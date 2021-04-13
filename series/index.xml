@@ -8,13 +8,22 @@
     <language>en</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;C. Wang&lt;/a&gt; and &lt;a href=&#34;https://www.ruiqima.com/&#34;&gt;R. Ma&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Tue, 26 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dandoreyrodriguez.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dandoreyrodriguez.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Themes Guide</title>
-      <link>https://dandoreyrodriguez.github.io/series/themes-guide/</link>
-      <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
+      <title>Essays</title>
+      <link>https://dandoreyrodriguez.github.io/series/essays/</link>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://dandoreyrodriguez.github.io/series/themes-guide/</guid>
+      <guid>https://dandoreyrodriguez.github.io/series/essays/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reviews</title>
+      <link>https://dandoreyrodriguez.github.io/series/reviews/</link>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dandoreyrodriguez.github.io/series/reviews/</guid>
       <description></description>
     </item>
     
