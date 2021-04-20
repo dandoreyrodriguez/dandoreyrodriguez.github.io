@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang='en' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>Hidalgo and Complexity | D. J. Dorey Rodriguez</title>
+
+<meta name="generator" content="Hugo Eureka 0.7.1-dev" />
+<link rel="stylesheet" href="https://dandoreyrodriguez.github.io/css/eureka.min.css">
+<script defer src="https://dandoreyrodriguez.github.io/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://dandoreyrodriguez.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://dandoreyrodriguez.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
+
+<meta name="description"
+  content="On Complexity Economics.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Blog Posts",
+      "item":"https://dandoreyrodriguez.github.io/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"Hidalgo and Complexity",
+      "item":"https://dandoreyrodriguez.github.io/posts/2019-06-16-hidalgo-and-complexity/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://dandoreyrodriguez.github.io/posts/2019-06-16-hidalgo-and-complexity/"
+    },
+    "headline": "Hidalgo and Complexity | D. J. Dorey Rodriguez","datePublished": "2019-06-16T00:00:00+00:00",
+    "dateModified": "2021-04-20T10:29:52+01:00",
+    "wordCount":  721 ,
+    "author": {
+        "@type": "Person",
+        "name": ["example-author"]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://dandoreyrodriguez.github.io/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003eOn Complexity Economics.\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="Hidalgo and Complexity | D. J. Dorey Rodriguez" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://dandoreyrodriguez.github.io/images/icon.png">
+
+
+<meta property="og:url" content="https://dandoreyrodriguez.github.io/posts/2019-06-16-hidalgo-and-complexity/" />
+
+
+
+
+<meta property="og:description" content="On Complexity Economics." />
+
+
+
+
+<meta property="og:locale" content="en" />
+
+
+
+
+<meta property="og:site_name" content="D. J. Dorey Rodriguez" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2019-06-16T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2021-04-20T10:29:52&#43;01:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="Economics" />
+
+<meta property="article:tag" content="Complexiy" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">D. J. Dorey Rodriguez</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Posts</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">Auto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            switchMode('Auto')
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">Hidalgo and Complexity</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-06-16</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>4 min read</span>
+    </div>
+    
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="https://dandoreyrodriguez.github.io/series/econoimcs/" class="hover:text-eureka">Econoimcs</a>
+        
+    </div>
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <p>On Complexity Economics.</p>
+<p>César Hidalgo is a physicist, author and entrepreneur who is Associate Professor at MIT and director of the Collective Learning group at the MIT Media Lab. Hidalgo attempts to use statistical techniques adopted in physics to conduct research into complexity economics, clearly showing the value of an interdisciplinary approach to economics.</p>
+<p>Key to the theories of Hidalgo is the idea of information, which he explains in his book “Why Information Grows.” Hidalgo postulates that information is simply an arrangement of order, or a lack of entropy. In the physical world, order often gives way to disorder. This is the second law of thermo-dynamics. However, importantly, solids can with-hold information, and order emerges from out-of-equilibrium states. What makes us as a society unique is that humans can accumulate knowledge and “crystallise imagination” into solid atoms. Furthermore, in an economy, we have the ability to share knowledge in the products that we engage with. The current world, with its adoption of technology, is one where information can flow more freely. In particular, wealthy countries continue to prosper as they are particularly good at creating a network in which information can flow more freely.</p>
+<p>From these theories of information Hidalgo argues that the economy could be best represented not as a static system of equilibria, but as a dynamic network where new information is constantly being shared. Hence, it is important to think about the complexity that emerges in an economy.</p>
+<p>In Hidalgo and Hausmann’s paper “A Network View of Economic Development”, the two describe the economy as a network and focus on mapping out the tendency of an economy to diversify. Of course, countries are much more likely to go on to develop expertise in an area which requires similar information to that which is currently required to make exported goods. This is very intuitive and Hidalgo allows us to understand diversification visually. He calls this idea the Product Space, where two products are linked in a network based on the probability that they are co-exported. This can be used to look at best route to complexity for a given country.</p>
+<p>Hidalgo is best known for his work linking complexity to economic growth. He argues that the complexity of a country’s exports is linked to its level of income. In Hidalgo and Hausmann’s paper “the building blocks of economic complexity”, he indeed provides evidence that the two are empirically linked, and that the deviation between complexity and levels of income is a much better predictor of future economic growth than traditional measures of capital or the development of capital. This view of the economy, based on information and networks, is both refreshing and promising, potentially giving us a much more accurate picture of how the economy truly functions. These premises find their base in statistical physics and promises to be sensitive to movements that traditional economics cannot detect.</p>
+<p>Larry Hardesty from the MIT News Office writes about the consequences of Hidalgo’s work with respect to inequality. He reports that Hidalgo’s work concludes, empirically, that a lack of economic complexity leads to high economic inequality and vice-versa. Hidalgo’s data supports the idea that a lack of complexity coincides with few industries stimulating the economy. High complexity leads to a wealth of industries competing for workers and all generating wealth leading to greater equality.</p>
+<p>The empirical arguments of Hidalgo, to me, are refreshing and inspiring. His view of macroeconomic phenomena and the economy in general, are very reasonable and mathematically verifiable. Indeed, mathematically, the indicators that he has created have outperformed traditional models that dominate economics. Complexity economics, and Hidalgo’s work, are extremely interesting to me since mainstream neoclassical economic theories are based upon seemingly outdated assumptions and mathematical models. Yet network economics, aided by the possibilities provided statistical techniques, can give economists a much clearer picture of how agents interact in an economy. A more scientific, empirical lens through which to analyse market movements provides us with an opportunity to revise theories in fields such as development economics, behavioural economics and political economy. Indeed, the work of Hidalgo brings economics closer to political economy and further away from static equilibrium models of traditional economics. This, to me, is exciting. Complexity economics helps us to better understand the economy and to equip ourselves with the tools we need to analyse future challenges.</p>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://dandoreyrodriguez.github.io/tags/economics/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Economics</a>
+    
+    <a href="https://dandoreyrodriguez.github.io/tags/complexiy/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Complexiy</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://dandoreyrodriguez.github.io/authors/example-author/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://dandoreyrodriguez.github.io/images/danl.png" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://dandoreyrodriguez.github.io/authors/example-author/" class="block font-bold text-lg pb-1 mb-2 border-b">Daniel Dorey Rodriguez</a>
+            <span class="block pb-2">Student, tennis and hockey player, drums enthusiast, and generally curious person.</span>
+            
+            
+            
+            
+            
+            <a href="mailto:daniel.dorey.r@gmail.com" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://twitter.com/dorey_rodriguez" class="mr-1">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://github.com/dandoreyrodriguez" class="mr-1">
+                <i class="fab fa-github"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">Previous</span>
+        <a href="https://dandoreyrodriguez.github.io/posts/2021-04-13-peter-thiel-philosopher-or-entrepreneur/" class="block">Peter Thiel : Philosopher or Entrepreneur?</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+    </div>
+</div>
+
+        
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+<div class="bg-secondary-bg rounded p-6">
+    <h3 class="text-lg font-semibold mb-4">Series of Posts</h3>
+    <div class="content">
+        
+        
+        <a href="https://dandoreyrodriguez.github.io/posts/2019-06-16-hidalgo-and-complexity/">Hidalgo and Complexity</a>
+        <br />
+        
+        
+    </div>
+</div>
+        
+        
+    </div>
+    
+
+    
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy; 2021 <a href="https://www.wangchucheng.com/">C. Wang</a> and <a href="https://www.ruiqima.com/">R. Ma</a>
+ &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>
